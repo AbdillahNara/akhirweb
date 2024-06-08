@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding:0px
+}
+
+.header-nav{
+    background-color: maroon;
+    padding:3px 0;
+    display:flex;
+    justify-content:space-around;
+    box-shadow: 0px 0px 25px 10px rosybrown;
+}
+
+.header-nav ul{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.header-nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.header-left{
+    color:white;
+}
+
+.header-left a{
+    text-decoration:none; 
+    color:white;
+}

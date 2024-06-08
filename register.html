@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style/hutao.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 20px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+        }
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar li {
+            margin: 0 15px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .header-left img {
+            width: 76px;
+            border-radius: 50%;
+        }
+        #card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding: 40px;
+            margin-top: 80px;
+        }
+        #card-title {
+            text-align: center;
+        }
+        .Underline-title {
+            height: 2px;
+            width: 60px;
+            background: #333;
+            margin: 10px auto 20px auto;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-content {
+            border: none;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+        .form-content:focus {
+            border-bottom: 2px solid #333;
+        }
+        #submit-btn {
+            background: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        #submit-btn:hover {
+            background: #555;
+        }
+        #forgot-pass {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+    </style>
+    <script>
+        function validasiForm(event) {
+            event.preventDefault(); // Mencegah pengiriman form
+
+            var nama = document.getElementById("user-name").value;
+            var email = document.getElementById("user-email").value;
+            var kataSandi = document.getElementById("user-password").value;
+
+            if (nama === "" || email === "" || kataSandi === "") {
+                alert("Semua kolom harus diisi");
+                return false;
+            }
+
+            // Tambahkan validasi lebih lanjut jika diperlukan
+
+            alert("Form berhasil dikirim!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="header-nav">
+            <div class="header-left">
+                <a href="menu.html"><img src="/img/bd886d7ccc6f8dd8db17e841233c9656.jpg" alt="Logo"></a>
+            </div>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="card">
+        <div id="card-content">
+            <div id="card-title">
+                <h2>Register</h2>
+                <div class="Underline-title"></div>
+            </div>
+            <form method="post" class="form" onsubmit="validasiForm(event)">
+                <label for="user-name" style="padding-top: 13px;">&nbsp;Name</label>
+                <input id="user-name" class="form-content" type="text" name="name" autocomplete="on" required />
+                <div class="form-border"></div>
+                <label for="user-email" style="padding-top: 13px;">&nbsp;Email</label>
+                <input id="user-email" class="form-content" type="email" name="email" autocomplete="on" required />
+                <div class="form-border"></div>
+                <label for="user-password" style="padding-top: 27px;">&nbsp;Password</label>
+                <input id="user-password" class="form-content" type="password" name="password" required />
+                <div class="form-border"></div>
+                <a href="#">
+                    <legend id="forgot-pass">Good Luck</legend>
+                </a>
+                <input id="submit-btn" type="submit" name="submit" value="Save" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>
